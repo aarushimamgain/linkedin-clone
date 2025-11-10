@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://linkedin-clone-u1ql.onrender.com/api",
 });
 
 API.interceptors.request.use((config) => {
@@ -9,3 +9,4 @@ API.interceptors.request.use((config) => {
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
+
